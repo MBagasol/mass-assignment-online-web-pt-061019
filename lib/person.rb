@@ -6,7 +6,8 @@ class Person
 
   def initialize(attributes=nil)
     if attributes
-      attributes.each{|k, v| 
+      attributes.each {|k, v| self.send("#{k}=", v)}
+    end
 
 
   end
